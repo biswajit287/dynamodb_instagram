@@ -6,7 +6,7 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs12.x
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -31,24 +31,28 @@ provider:
 
 functions:
   createUser:
+    name: create-user
     handler: src/handlers/user/create.main
     events:
       - http:
           path: /users
           method: post
   getUser:
+    name: get-user
     handler: src/handlers/user/get.main
     events:
       - http:
           path: /users/{username}
           method: get
   createPhoto:
+    name: create-photo
     handler: src/handlers/photo/create.main
     events:
       - http:
           path: /users/{username}/photos
           method: post
   getPhoto:
+    name: get-photo
     handler: src/handlers/photo/get.main
     events:
       - http:
