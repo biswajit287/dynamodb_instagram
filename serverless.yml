@@ -32,25 +32,25 @@ provider:
 functions:
   createUser:
     name: create-user
-    handler: src/handlers/user/create.main
+    handler: src/handlers/createUser.main
     events:
       - http:
           path: /users
           method: post
   getUser:
     name: get-user
-    handler: src/handlers/user/get.main
+    handler: src/handlers/getUser.main
     events:
       - http:
           path: /users/{username}
           method: get
-  createPhoto:
-    name: create-photo
-    handler: src/handlers/photo/create.main
-    events:
-      - http:
-          path: /users/{username}/photos
-          method: post
+  # createPhoto:
+  #   name: create-photo
+  #   handler: src/handlers/photo/create.main
+  #   events:
+  #     - http:
+  #         path: /users/{username}/photos
+  #         method: post
   # getPhoto:
   #   name: get-photo
   #   handler: src/handlers/photo/get.main
