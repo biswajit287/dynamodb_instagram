@@ -51,13 +51,13 @@ functions:
       - http:
           path: /users/{username}/photos
           method: post
-  getPhoto:
-    name: get-photo
-    handler: src/handlers/photo/get.main
-    events:
-      - http:
-          path: /users/{username}/photos/{photoId}
-          method: get
+  # getPhoto:
+  #   name: get-photo
+  #   handler: src/handlers/photo/get.main
+  #   events:
+  #     - http:
+  #         path: /users/{username}/photos/{photoId}
+  #         method: get
 
 resources:
   Resources:
