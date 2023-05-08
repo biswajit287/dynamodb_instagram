@@ -1,0 +1,8 @@
+{
+    "pathParameters": {
+        "username": "biswajit"
+    },
+    "body": {
+        "url": "abc.com"
+    }
+}

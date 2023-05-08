@@ -1,7 +1,7 @@
 service: dynamodb-instagram
 
 plugins:
-  # - serverless-esbuild
+  - serverless-esbuild
   - serverless-offline
 
 provider:
@@ -32,18 +32,18 @@ provider:
 functions:
   createUser:
     name: create-user
-    handler: src/handlers/createUser.main
+    handler: src/handlers/user/create.main
     events:
       - http:
           path: /users
-          method: post
+          method: POST
   getUser:
     name: get-user
-    handler: src/handlers/getUser.main
+    handler: src/handlers/user/get.main
     events:
       - http:
           path: /users/{username}
-          method: get
+          method: GET
   # createPhoto:
   #   name: create-photo
   #   handler: src/handlers/photo/create.main

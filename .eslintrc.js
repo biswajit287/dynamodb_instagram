@@ -9,14 +9,14 @@ module.exports = {
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:promise/recommended",
-        "prettier",
-        "prettier/@typescript-eslint"
+        "prettier"
     ],
     plugins: ["@typescript-eslint", "import", "jest"],
     rules: {
         "vue/attributes-order": "off",
         "no-prototype-builtins": "off",
         "import/no-default-export": "off",
+        "@typescript-eslint/no-explicit-any": ["off"],
         "no-use-before-define": ["error", { functions: false, classes: true, variables: false }],
         "@typescript-eslint/no-use-before-define": [
             "error",
@@ -32,6 +32,8 @@ module.exports = {
                 allowHigherOrderFunctions: true,
                 allowTypedFunctionExpressions: true
             }
-        ]
+        ],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["off"]
     }
 }
