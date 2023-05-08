@@ -44,20 +44,20 @@ functions:
       - http:
           path: /users/{username}
           method: GET
-  # createPhoto:
-  #   name: create-photo
-  #   handler: src/handlers/photo/create.main
-  #   events:
-  #     - http:
-  #         path: /users/{username}/photos
-  #         method: post
-  # getPhoto:
-  #   name: get-photo
-  #   handler: src/handlers/photo/get.main
-  #   events:
-  #     - http:
-  #         path: /users/{username}/photos/{photoId}
-  #         method: get
+  createPhoto:
+    name: create-photo
+    handler: src/handlers/photo/create.main
+    events:
+      - http:
+          path: /users/{username}/photos
+          method: POST
+  getPhoto:
+    name: get-photo
+    handler: src/handlers/photo/get.main
+    events:
+      - http:
+          path: /users/{username}/photos/{photoId}
+          method: GET
 
 resources:
   Resources:
