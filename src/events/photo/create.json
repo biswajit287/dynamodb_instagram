@@ -2,7 +2,5 @@
     "pathParameters": {
         "username": "biswajit"
     },
-    "body": {
-        "url": "abc.com"
-    }
+    "body": "{\"url\": \"abc.com\"}"
 }

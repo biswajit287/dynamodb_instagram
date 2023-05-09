@@ -59,6 +59,22 @@ functions:
           path: /users/{username}/photos/{photoId}
           method: GET
 
+  commentOnPhoto:
+    name: comment-on-photo
+    handler: src/handlers/comment/create.main
+    events:
+      - http:
+          path: /users/{username}/photos/{photoId}/comments
+          method: POST
+
+  listCommentsForPhoto:
+    name: list-comments-for-photo
+    handler: src/handlers/comment/list.main
+    events:
+      - http:
+          path: /users/{username}/photos/{photoId}/comments
+          method: GET
+
 resources:
   Resources:
     InstagramTable:

@@ -2,7 +2,7 @@ import { APIGatewayProxyHandler, APIGatewayProxyEvent } from "aws-lambda"
 import { Photo, createPhoto } from "../../data/photo"
 
 export const main: APIGatewayProxyHandler = async (event: any) => {
-    const { username } = event.pathParameters
+    const { username } = event.pathParameters;
     const { url } = JSON.parse(event.body || "")
     const photo = new Photo(username, url)
     await createPhoto(photo)

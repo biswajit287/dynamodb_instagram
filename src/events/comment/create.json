@@ -1,0 +1,7 @@
+{
+    "pathParameters": {
+        "username": "biswajit",
+        "photoId": "01GZXMH6E11YAP76R6K4TE5X02"
+    },
+    "body": "{\"commentingUsername\": \"XYZ Mondal\", \"content\": \"hey handsome!\"}"
+}

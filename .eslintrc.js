@@ -5,12 +5,7 @@ module.exports = {
     env: {
         node: true
     },
-    extends: [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:promise/recommended",
-        "prettier"
-    ],
+    extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:promise/recommended", "prettier"],
     plugins: ["@typescript-eslint", "import", "jest"],
     rules: {
         "vue/attributes-order": "off",
